@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Animal from './animal'
+import {Actors, Actor} from './actors'
+
 
 function App() {
   const styleApp = {
@@ -48,9 +50,32 @@ function App() {
           <Animal name='Tiger' price='155000' isYear={false} isAvailable={true}></Animal>
         </div>
       </div>
+
+      {/* Actors  */}
+      <div>
+        <Actors></Actors>
+      </div>
+
+      {/* single actor  */}
+      <div>
+        <h2 style={{margin:'30px'}}>Only one Actor Add</h2>
+        <Actor actorName='Amita Bacchan' actorAge='55'></Actor>
+      </div>
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 function Student({name,depart}) {
   const stdStyle = {
