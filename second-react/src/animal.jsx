@@ -6,27 +6,25 @@ export default function Animal({name,price,isYear, isAvailable}) {
 
 
 function AnimalAvail({animalName,animalPrice,isYear, isAvailable}) {
-  const mBottom = {
-    marginBottom:'5px',
+  const baseStyle = {
+    padding: '15px 20px', 
+    borderRadius: '6px', 
+    color: 'white', 
+    width: '30%',
+    
   }
-  const newStyle = {};
-  let text;
-  if(isAvailable===true) {
-    newStyle.backgroundColor = 'tomato';
-    newStyle.color = 'white';
-    text = 'Yes';
-  }
-  else{
-    newStyle.backgroundColor = 'skyblue';
-    newStyle.color = 'black';
-    text = 'NO';
-  }
+  const availabilityStyle  = {
+    backgroundColor: isAvailable ?  'tomato' : 'skyblue',
+    color: isAvailable ? 'white' : 'black'
+  };
+  const mBottom = {marginBottom:'5px'};
+  
   return (
-    <div style={{...newStyle, padding: '15px 20px', borderRadius: '6px', color: 'white', width: '30%'}}>
+    <div style={{...availabilityStyle, ...baseStyle}}>
         <h2 style={mBottom}>Animal name: {animalName}</h2>
         <p style={mBottom}>Animal price: {animalPrice}</p>
         <p style={mBottom}>Is 2year+: {isYear.toString()}</p>
-        <p style={mBottom}>Is Availale+: {text}</p>
+        <p style={mBottom}>Is Availale+: {isAvailable ? 'Yes' : 'NO'}</p>
         <div className='buttonAnimal'>
           <button>Details</button>
           <button>Buy</button>
