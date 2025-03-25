@@ -11,20 +11,43 @@
 // console.log(sub);
 // console.log(mul);
 
-let state;
-function useState(initailValue) {
-  state = initailValue;
-  function setStates(newValue) {
-    state = newValue;
-  }
-  return [state, setStates];
+
+
+// let state;
+// function useState(initailValue) {
+//   state = initailValue;
+//   function setStates(newValue) {
+//     state = newValue;
+//   }
+//   return [state, setStates];
+// }
+
+// const [count, setStates] = useState(10);
+// console.log(count);
+// setStates(count+5);
+// console.log(state);
+// setStates(state+5);
+// console.log(state);
+// setStates(state+5);
+// console.log(state);
+
+
+let users = ['erfan','kairm','rahim','salam'];
+
+function userData() {
+  return new Promise((resolve, reject)=> {
+    const isError = false;
+    if(!isError) {
+      resolve(JSON.stringify(users))
+    }
+    else{
+      console.error('Have a error');
+    }
+  })
 }
 
-const [count, setStates] = useState(10);
-console.log(count);
-setStates(count+5);
-console.log(state);
-setStates(state+5);
-console.log(state);
-setStates(state+5);
-console.log(state);
+userData().then(res => {
+  const data = JSON.parse(res);
+  console.log(data);
+});
+userData().then(res => res.json()).then(data => console.log(data));
