@@ -1,6 +1,8 @@
 import './App.css'
 import {HeaderLogo, NavBar, HeaderBtn} from './header'
 import {CardContaier} from './card'
+import { Counter } from './counter'
+import {BatsmanContainer, Batsman} from './batsman'
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       </header>
       <main className='fixed-container'>
         <CardContaier></CardContaier>
+        <Counter></Counter>
+        <BatsmanContainer></BatsmanContainer>
       </main>
     </>
   )
