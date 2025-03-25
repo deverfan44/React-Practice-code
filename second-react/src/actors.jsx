@@ -19,7 +19,7 @@ export const Actors = () => {
       <div>
         {
           actorInfo.map(actor =>  {
-            return <Actor actorName={actor.name} actorAge={actor.age}></Actor>
+            return <Actor key={`actor-${Math.random()}`} actorName={actor.name} actorAge={actor.age}></Actor>
           })
         }
       </div>

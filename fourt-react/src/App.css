@@ -1,0 +1,37 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+}
+
+/* usually  */
+.flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.items-center{
+  align-items: center;
+}
+.list-none{
+  list-style: none;
+}
+.fixed-container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* logo */
+.logoStyle{
+  width: 40px;
+  height: 40px;
+}
+
+
+/* Cards  */
+.card{
+  width: 30%;
+  padding: 12px 10px;
+  /* border: 1px solid seagreen; */
+  text-align: center;
+}
