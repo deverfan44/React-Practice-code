@@ -5,8 +5,8 @@ let batsmanName = ['Tamin','Musfiq','Mehedi']
 export const BatsmanContainer = () => {
   return(
     <div className="flex justify-between items-center" style={{padding: '20px 0px'}}>
-      {batsmanName.map(batsman => {
-        return <Batsman name={batsman}></Batsman>;
+      {batsmanName.map((batsman,idx) => {
+        return <Batsman key={idx} name={batsman}></Batsman>;
       })}
     </div>  
   )

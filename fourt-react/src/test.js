@@ -50,4 +50,5 @@ userData().then(res => {
   const data = JSON.parse(res);
   console.log(data);
 });
+
 userData().then(res => res.json()).then(data => console.log(data));
