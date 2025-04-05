@@ -1,0 +1,29 @@
+@import "tailwindcss";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.items-center{
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.width-full {
+  max-width: 100%;
+}
+
+.cardContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
