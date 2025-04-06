@@ -11,13 +11,21 @@ const Countries = ({countriesPromise}) => {
   }
   const [visitedCountries, setVisitedCountries] = useState([]);
   const [visitedFlags, setVisitedFlags] = useState([]);
+
   const handleVisitedCountries = (countryName) => {
     if(!visitedCountries.includes(countryName)){
       const newCountries = [...visitedCountries, countryName];
       setVisitedCountries(newCountries);
-      console.log(visitedCountries);
+    }
+    else{
+      const idx = visitedCountries.indexOf(countryName);
+      const newCountries = visitedCountries.toSpliced(idx,1);
+      setVisitedCountries(newCountries);
     }
   }
+  
+  // console.log(visitedCountries);
+
   const handleVisitedFlags = (flag) => {
     const newFlags = [...visitedFlags, flag];
     setVisitedFlags(newFlags);
